@@ -28,9 +28,13 @@ import Dropdowns from "layouts/sections/elements/dropdowns";
 import ProgressBars from "layouts/sections/elements/progress-bars";
 import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
-import Presentation from "pages/Presentation";
 
-const routes = [
+//icon
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import EventSeatIcon from "@mui/icons-material/EventSeat";
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import Presentation from "pages/Presentation";
+const publicRoutes = [
   {
     name: "presentation",
     route: "/",
@@ -38,7 +42,11 @@ const routes = [
   },
   {
     name: "pages",
-    icon: <Icon>dashboard</Icon>,
+    icon: (
+      <Icon>
+        <DashboardIcon />
+      </Icon>
+    ),
     columns: 1,
     rowsPerColumn: 2,
     collapse: [
@@ -76,7 +84,11 @@ const routes = [
   },
   {
     name: "sections",
-    icon: <Icon>view_day</Icon>,
+    icon: (
+      <Icon>
+        <EventSeatIcon />
+      </Icon>
+    ),
     collapse: [
       {
         name: "page sections",
@@ -207,7 +219,11 @@ const routes = [
   },
   {
     name: "docs",
-    icon: <Icon>article</Icon>,
+    icon: (
+      <Icon>
+        <ListAltIcon />
+      </Icon>
+    ),
     collapse: [
       {
         name: "getting started",
@@ -236,6 +252,11 @@ const routes = [
     icon: <GitHubIcon />,
     href: "https://www.github.com/creativetimofficial/material-kit-react",
   },
+  // {
+  //   name: 'Iniciar Sesión',
+  //          component: <SignIn />,
+  //   href: 'https://www.github.com/creativetimofficial/material-kit-react',
+  // },
 ];
 
-export default routes;
+export default publicRoutes;

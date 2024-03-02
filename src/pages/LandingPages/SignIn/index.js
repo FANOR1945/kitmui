@@ -52,7 +52,7 @@ function SignInBasic() {
 
   return (
     <>
-      <DefaultNavbar
+      {/* <DefaultNavbar
         routes={routes}
         action={{
           type: "external",
@@ -62,7 +62,7 @@ function SignInBasic() {
         }}
         transparent
         light
-      />
+      /> */}
       <MKBox
         position="absolute"
         top={0}

@@ -1,4 +1,3 @@
-// @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
@@ -13,34 +12,34 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // About Us page sections
-import Information from "pages/LandingPages/AboutUs/sections/Information";
-import Team from "pages/LandingPages/AboutUs/sections/Team";
-import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
-import Newsletter from "pages/LandingPages/AboutUs/sections/Newsletter";
+// import Information from 'pages/LandingPages/Main/sections/Information'
+// import Team from 'pages/LandingPages/Main/sections/Team'
+// import Featuring from 'pages/LandingPages/Main/sections/Featuring'
+// import Newsletter from 'pages/LandingPages/Main/sections/Newsletter'
 
 // Routes
-import routes from "routes";
+import privateRoutes from "utils/routes/privateRoutes";
 import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/bg-about-us.jpg";
 
-function AboutUs() {
+function Main() {
   return (
     <>
       {/* <DefaultNavbar
-        routes={routes}
+        routes={privateRoutes}
         action={{
-          type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          type: "internal",
+          route: "/pages/landing-pages/about-us",
+          label: "Cerrar Sessión",
           color: "default",
         }}
         transparent
         light
       /> */}
       <MKBox
-        minHeight="75vh"
+        minHeight="100vh"
         width="100%"
         sx={{
           backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
@@ -74,14 +73,13 @@ function AboutUs() {
                 },
               })}
             >
-              Work with an amazing design
+              Main Dashboard
             </MKTypography>
             <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
-              We&apos;re constantly trying to express ourselves and actualize our dreams. If you
-              have the opportunity to play this game
+              Main Dashboard
             </MKTypography>
             <MKButton color="default" sx={{ color: ({ palette: { dark } }) => dark.main }}>
-              create account
+              Oe Fanor
             </MKButton>
             <MKTypography variant="h6" color="white" mt={8} mb={1}>
               Find us on
@@ -112,16 +110,16 @@ function AboutUs() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <Information />
+        {/* <Information />
         <Team />
         <Featuring />
-        <Newsletter />
+        <Newsletter /> */}
       </Card>
-      <MKBox pt={6} px={1} mt={6}>
+      {/* <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
-      </MKBox>
+      </MKBox> */}
     </>
   );
 }
 
-export default AboutUs;
+export default Main;
